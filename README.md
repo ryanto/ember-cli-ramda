@@ -1,25 +1,19 @@
 # Ember-cli-ramda
 
-This README outlines the details of collaborating on this Ember addon.
+This addon adds [ramda.js](http://ramdajs.com) to an ember-cli based
+project.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Simply run:
 
-## Running
+```
+npm install ember-cli-ramda --save-dev
+ember g ember-cli-ramda
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### Usage
 
-## Running Tests
 
-* `ember test`
-* `ember test --server`
 
-## Building
 
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
