@@ -13,7 +13,7 @@ module.exports = {
   included: function included(app) {
     app.import('bower_components/ramda/ramda.js');
 
-    var shim = 'vendor/ember-cli-ramda/addon/ramda-shim.js';
+    var shim = 'node_modules/ember-cli-ramda/addon/ramda-shim.js';
 
     fs.exists(shim, function(exists) {
       if (exists) {
