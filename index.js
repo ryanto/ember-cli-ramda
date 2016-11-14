@@ -1,7 +1,6 @@
 /* jshint node: true */
 'use strict';
 var path = require('path');
-var fs = require('fs');
 
 module.exports = {
   name: 'ember-cli-ramda',
@@ -11,14 +10,15 @@ module.exports = {
   },
 
   included: function included(app) {
-    app.import('bower_components/ramda/ramda.js');
-
-    var shim = 'node_modules/ember-cli-ramda/addon/ramda-shim.js';
-
-    fs.exists(shim, function(exists) {
-      if (exists) {
-        app.import(shim);
+    app.import(app.bowerDirectory + '/ramda/dist/ramda.js');
+    app.import('vendor/ember-cli-ramda/ember-cli-ramda-shim.js', {
+      exports: {
+        ramda: ['default']
       }
     });
+  },
+
+  treeForVendor: function() {
+    return path.join(__dirname, 'client');
   }
 };
